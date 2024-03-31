@@ -1,19 +1,25 @@
 digraph "Call graph: input.ll" {
 	label="Call graph: input.ll";
 
-	Node0x6150091e91c0 [shape=record,label="{DC}"];
-	Node0x6150091e9270 [shape=record,label="{BC}"];
-	Node0x6150091e9270 -> Node0x6150091e91c0;
-	Node0x6150091f3320 [shape=record,label="{F}"];
-	Node0x6150091f3450 [shape=record,label="{E}"];
-	Node0x6150091f34d0 [shape=record,label="{D}"];
-	Node0x6150091f36a0 [shape=record,label="{C}"];
-	Node0x6150091f36a0 -> Node0x6150091f34d0;
-	Node0x6150091f36a0 -> Node0x6150091f3450;
-	Node0x6150091f71c0 [shape=record,label="{B}"];
-	Node0x6150091f71c0 -> Node0x6150091f36a0;
-	Node0x6150091f7240 [shape=record,label="{A}"];
-	Node0x6150091f7240 -> Node0x6150091f71c0;
-	Node0x6150091f72f0 [shape=record,label="{main}"];
-	Node0x6150091f72f0 -> Node0x6150091f7240;
+	Node0x57503994e210 [shape=record,label="{_Z13add_somethingii}"];
+	Node0x57503994e210 -> Node0x57503994f640;
+	Node0x57503994e210 -> Node0x575039945600;
+	Node0x57503994f640 [shape=record,label="{_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc}"];
+	Node0x575039945600 [shape=record,label="{_ZNSolsEPFRSoS_E}"];
+	Node0x575039944c70 [shape=record,label="{_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_}"];
+	Node0x575039944cf0 [shape=record,label="{_Z21print_something_fancyi}"];
+	Node0x575039944cf0 -> Node0x57503994f640;
+	Node0x575039944cf0 -> Node0x575039945600;
+	Node0x575039943cd0 [shape=record,label="{_Z9fibonaccii}"];
+	Node0x575039943cd0 -> Node0x57503994f640;
+	Node0x575039943cd0 -> Node0x575039945600;
+	Node0x575039943cd0 -> Node0x575039943cd0;
+	Node0x575039943d50 [shape=record,label="{main}"];
+	Node0x575039943d50 -> Node0x57503994f640;
+	Node0x575039943d50 -> Node0x575039945600;
+	Node0x575039943d50 -> Node0x57503994e210;
+	Node0x575039943d50 -> Node0x575039943e80;
+	Node0x575039943d50 -> Node0x575039943cd0;
+	Node0x575039943d50 -> Node0x575039944cf0;
+	Node0x575039943e80 [shape=record,label="{_ZNSolsEi}"];
 }
